@@ -9,7 +9,8 @@ class ShowVehiculos extends Controller
 {
     //
     public function get_vehiculos($id){
-        $responsable = Responsable::with('vehiculos')->where('id', $id)->get()->toArray();
-        dd($responsable);
+            $vehiculos = Responsable::with(['vehiculos'])->where('id', $id)->get()->toArray();
+            return view('pages.home', ['vehiculos' => $vehiculos[0]["vehiculos"] ] );
+        //dd($responsable);
     }
 }

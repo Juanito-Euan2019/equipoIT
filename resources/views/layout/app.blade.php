@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
@@ -14,32 +11,30 @@
     <title>Tiendita de La esquina</title>
 
     <!-- favicon icon -->
-
     <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}"  />
-
     <!-- inject css start -->
-    <link rel="stylesheet" href="{{asset('style.css')}}">
     <!--== bulma css -->
-
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.css" rel="stylesheet" type="text/css" />
-
     <!-- inject css end -->
-
 </head>
 
     <body>
 
         <div class="page-wrapper">
 
-            @include('partials.header')
+            <header>
+                @include('partials.header')
+            </header>
 
             @yield('content')
 
-            @include('partials.footer')
+            <footer class="footer">
+                @include('partials.footer')
+            </footer>
 
         </div>
 
         <!-- inject js start -->
-    </body>
 
+    </body>
 </html>
